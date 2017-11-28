@@ -10,7 +10,8 @@ export class ShoppingListComponent {
   shopping = [];
   shop: Shop = {
     name: '',
-    value: 0
+    value: 0,
+    date_launch: '2017-11-28'
   };
 
   add() {

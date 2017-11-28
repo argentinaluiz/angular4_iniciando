@@ -1,25 +1,45 @@
 
-<label>Nome</label>
+<label>Nome:</label>
 <input type="text" [(ngModel)]="shop.name">
 <br/><br/>
-<label>Valor</label>
-<input type="number" [(ngModel)]="shop.value">
+<label>Valor:</label>
+<input type="text" [(ngModel)]="shop.value">
 <br/><br/>
+<label>Data:</label>
+<input type="text" [(ngModel)]="shop.date_launch">
+ <br/><br/>
 <button type="button" (click)="add()">Adicionar na lista</button>
 
-
-
 <ul>
+  <li *ngFor="let shop of shopping">
+    {{
+    (shop.name | lowercase) + ' - ' +
+    (shop.value | formatCurrency) + ' - ' +
+    (shop.date_launch | formatDate)
+    }}
+
+  </li>
+</ul>
+
+<!-- <li *ngFor="let shop of shopping"
+    [innerHtml]="(shop.name | lowercase) + ' - ' + shop.value">
+  </li> -->
+
+<!-- <li *ngFor="let shop of shopping">
+  {{shop.name | uppercase}}
+  {{shop.name + ' - ' + shop.value}}
+</li> -->
+
  <!-- <li [id]=" 'list-' + shop.name"
       class="teste"
       [ngClass]="{'shop-green':shop.value > 5,'shop-red':shop.value < 5}"
       *ngFor="let shop of tasks" [innerHtml]="shop.name + ' - ' + shop.value">
   </li> -->
 
-  <li id="list-{{shop.name}}"
+ <!-- <<li id="list-{{shop.name}}"
       class="teste"
       [ngClass]="{'shop-green':shop.value>=5,'shop-red':shop.value<5}"
       *ngFor="let shop of shopping" [innerHtml]="shop.name + ' - ' + shop.value">
-  </li>
+  </li> -->
 
-</ul>
+

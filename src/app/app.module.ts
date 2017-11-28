@@ -5,12 +5,16 @@ import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { FormatCurrencyPipe } from './format-currency.pipe';
+import { FormatDatePipe } from './format-date.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    FormatCurrencyPipe,
+    FormatDatePipe
   ],
   imports: [
     BrowserModule,
