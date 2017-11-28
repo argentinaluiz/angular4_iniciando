@@ -1,8 +1,25 @@
-<input type="text" [(ngModel)]="shop">
 
+<label>Nome</label>
+<input type="text" [(ngModel)]="shop.name">
+<br/><br/>
+<label>Valor</label>
+<input type="number" [(ngModel)]="shop.value">
+<br/><br/>
 <button type="button" (click)="add()">Adicionar na lista</button>
+
+
+
 <ul>
-  <li *ngFor="let shop of shopping">
-    {{shop}}
+ <!-- <li [id]=" 'list-' + shop.name"
+      class="teste"
+      [ngClass]="{'shop-green':shop.value > 5,'shop-red':shop.value < 5}"
+      *ngFor="let shop of tasks" [innerHtml]="shop.name + ' - ' + shop.value">
+  </li> -->
+
+  <li id="list-{{shop.name}}"
+      class="teste"
+      [ngClass]="{'shop-green':shop.value>=5,'shop-red':shop.value<5}"
+      *ngFor="let shop of shopping" [innerHtml]="shop.name + ' - ' + shop.value">
   </li>
+
 </ul>

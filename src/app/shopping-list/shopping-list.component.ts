@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
-
+import {Shop} from '../shop';
 @Component({
-  selector: 'shopping-list',
+  selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.css']
 })
-export class ShoppingListComponent{
+export class ShoppingListComponent {
 
   shopping = [];
-  shop ="";
-  add(){
+  shop: Shop = {
+    name: '',
+    value: 0
+  };
+
+  add() {
     this.shopping.push(this.shop);
   }
-
 }

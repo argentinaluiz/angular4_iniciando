@@ -10,7 +10,7 @@ describe('ShoppingListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ ShoppingListComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
