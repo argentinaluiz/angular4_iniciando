@@ -1,15 +1,4 @@
 
-<label>Nome:</label>
-<input type="text" [(ngModel)]="shop.name">
-<br/><br/>
-<label>Valor:</label>
-<input type="text" [(ngModel)]="shop.value">
-<br/><br/>
-<label>Data:</label>
-<input type="text" [(ngModel)]="shop.date_launch">
- <br/><br/>
-<button type="button" (click)="add()">Adicionar na lista</button>
-
 <ul>
   <li *ngFor="let shop of shopping" [appMyShop]="shop">
     {{
@@ -17,7 +6,6 @@
     (shop.value | formatCurrency) + ' - ' +
     (shop.date_launch | formatDate)
     }}
-
   </li>
 </ul>
 
