@@ -11,7 +11,7 @@
 <button type="button" (click)="add()">Adicionar na lista</button>
 
 <ul>
-  <li *ngFor="let shop of shopping">
+  <li *ngFor="let shop of shopping" [appMyShop]="shop">
     {{
     (shop.name | lowercase) + ' - ' +
     (shop.value | formatCurrency) + ' - ' +

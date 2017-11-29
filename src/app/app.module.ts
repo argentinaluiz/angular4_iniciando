@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { FormatCurrencyPipe } from './format-currency.pipe';
 import { FormatDatePipe } from './format-date.pipe';
+import { MyShopDirective } from './my-shop.directive';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormatDatePipe } from './format-date.pipe';
     AppComponent,
     ShoppingListComponent,
     FormatCurrencyPipe,
-    FormatDatePipe
+    FormatDatePipe,
+    MyShopDirective
   ],
   imports: [
     BrowserModule,

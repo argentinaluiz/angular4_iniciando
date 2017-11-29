@@ -6,15 +6,14 @@ import {Shop} from '../shop';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent {
-
   shopping = [];
   shop: Shop = {
     name: '',
     value: 0,
     date_launch: '2017-11-28'
   };
-
   add() {
-    this.shopping.push(this.shop);
+    const shop = Object.assign({}, this.shop);
+    this.shopping.push(shop);
   }
 }
