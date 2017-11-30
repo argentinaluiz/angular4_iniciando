@@ -9,23 +9,23 @@ export class MyShopDirective {
   constructor(private el: ElementRef) {
     this.el.nativeElement.innerHTML += 'conteúdo inserido: ';
   }
-  get myShop() {
+  get appMyShop() {
     return this._myShop;
   }
 
-  set myShop(value: Shop) {
+  @Input()
+  set appMyShop(value: Shop) {
     this._myShop = value;
     this.changeColorShop();
   }
-    @Input()
-    appMyShop: string;
 
     @HostListener('click')
     onClick() {
-      alert(this.appMyShop);
+      alert(this._myShop);
     }
 
     changeColorShop(){
-      this.el.nativeElement.style.color = this.appMyShop > 5 ? 'green' : 'red';
+      console.log(this.appMyShop);
+      this.el.nativeElement.style.color = this._myShop.value > 5 ? 'green' : 'red';
     }
 }
